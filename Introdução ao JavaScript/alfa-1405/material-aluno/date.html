@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <h1>HTML Base</h1>
+
+  <script type="text/javascript">
+  /*
+  	var e,d,data;
+
+  	d = new Date("1993-02-29");
+
+  	e = d.getDay();
+
+  	console.log(d);
+  	console.log(e);
+	*/
+/*
+  	data = new Date();
+  	horas = data.getHours();
+
+
+  	if(horas < 5){
+  		console.log("Boa noite " + data);
+  	}else if(horas < 8){
+  		console.log("Bom dia");
+  	}else if (horas < 12){
+  		console.log("Bom dia");
+  	}else if (horas < 18){
+  		console.log("Boa tarde " + data);
+  	}else{
+  		console.log("Boa noite");
+  	}*/
+
+  	function saudacao(data){
+  		var h = data.getHours();
+  		if(h < 12){
+  			return 'bom dia';
+  		}
+  		if(h < 18){
+  			return 'boa tarde';
+  		}
+  		return 'boa noite';
+  	}
+
+  	function pegaMes(){
+  		var data = new Date();
+  		var pegaMes = data.getMonth();
+
+  		var mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro",
+  		"Novembro", "Dezembro"];
+
+  		return mes[pegaMes];
+  	}
+
+	function diasemana(){
+
+		var hoje = new Date();
+		var dia = hoje.getDay();
+
+		var semana = new Array();
+			semana[0] = 'Domingo';
+			semana[1] = 'Segunda-Feira';
+			semana[2] = 'Terça-Feira';
+			semana[3] = 'Quarta-Feia';
+			semana[4] = 'Quinta-Feira';
+			semana[5] = 'Sexta-Feira';
+			semana[6] = 'Sábado';
+
+			return semana[dia];
+	}
+
+  	var saida = '';
+
+  	var d = new Date(1993,02,29,14,00,00);
+
+  	saida += saudacao(d);
+
+  	console.log(saida + ", hoje é " + diasemana() + ", Estamos no mês de " + pegaMes());
+
+  </script>
+</body>
+</html>
