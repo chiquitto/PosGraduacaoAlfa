@@ -1,0 +1,19 @@
+h1{
+	font: 36px tahoma;
+	color: #FF0;
+	text-shadow: 5px 2px 15px #000;
+	text-align: center;
+}
+#box{
+	width: 400px;
+	height: 50px;
+	box-shadow: 5px 10px 5px #000;
+	background: #f00;
+	font: 1.5em tahoma;
+	border-radius: 10px;
+	display: table;
+	padding: 10px;
+}
+img{
+	width: 650px;
+}

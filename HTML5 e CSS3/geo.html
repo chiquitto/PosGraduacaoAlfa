@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script>
+		function encontrar(){
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}
+			else {
+				alert('Não.');
+			}
+		}
+
+		function showPosition(position){
+			var latitude = position.coords.latitude;
+			var longitude = position.coords.longitude;
+			var mapOptions = {
+				zoom: 14,
+				center: new google.maps.LatLng(latitude,longitude),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+			var latlon = new google.maps.LatLng(latitude,longitude);
+			var marker = new google.maps.Marker(
+				{
+					position:latlon, 
+					map:map, 
+					title:"Teste"
+				}
+			);
+		}
+
+		google.maps.event.addDomListener(window,'load',encontrar);
+		</script>
+		<style>
+			html, body, #map_canvas {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+		</style>
+		<div id="map_canvas"></div>
+	</head>
+	<body>
+		
+	</body>
+</html>

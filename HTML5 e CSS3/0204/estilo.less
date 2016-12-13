@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+@fonte : 'Candal', sans-serif;
+@fonte2 : Tahoma, Verdana;
+@tamanho1 : 36px;
+@tamanho2 : 15px;
+@cor1 : #7F00FF;
+@cor2: #FF00FF;
+@cor3 : red;
+@cor4: #fff;
+@size1: 980px;
+@size2: 100%;
+
+body{
+	background: linear-gradient(to bottom,@cor1,@cor2) fixed;
+}
+.texto{
+	font-family: @fonte2;
+	color: @cor4;
+	font-size: @tamanho2;
+}
+footer{
+	width: 100%;
+	text-align: center;
+	.texto;
+	background: @cor1;
+}
+p{
+	font: @tamanho2 @fonte2;
+}
+h1{
+	font-family: @fonte;
+}
+#pagina{
+	width: @size1;
+	margin: auto;
+	background: @cor4;
+	box-shadow: 2px 2px 5px #000;
+}
+img{
+	width: @size1;
+}
+
+@media(max-width: 800px){
+	#pagina{
+		width: 600px;
+		margin: auto;
+	}
+	h1{
+		color: @cor1;
+	}
+	header{
+		width: 100%;
+	}n
+	footer{
+		display: none;
+	}
+}
+
+@media (max-width: 480px){
+	#padding{
+		width: 100%;
+	}
+	h1{
+		color: @cor3;
+	}
+	p{
+		color: @cor2;
+		font-family:@fonte2;
+	}
+}

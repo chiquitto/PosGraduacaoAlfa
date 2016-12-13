@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API de Formulário</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Formulários com HTML5</h1>
+	<form name="form1" method="post" action="">
+		<label for="data">Data de Nascimento</label>
+		<input type="data" name="data" size="40" required title="Data de Nascimento" placeholder="Preencha a data de nascimento">
+		<br>
+		<label for="cor">Cor</label>
+		<input type="color" name="cor" required title="Selecione uma cor">
+		<br>
+		<label for="cpf">CPF</label>
+		<input type="text" name="cpf" size="40" required title="Digite o CPF" placeholder="Preencha com um CPF"
+		pattern="\d{3}\.\d{3}\.d{3}-\.d{2}">
+		<br>
+		<label for="idade">Idade</label>
+		<input type="number" name="idade" required title="Digite sua idade" placeholder="Preencha a idade" min="17" max="30">
+		<button type="submit" value="">Testar</button>
+	</form>
+</body>
+</html>
